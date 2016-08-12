@@ -1,0 +1,98 @@
+h1{
+     margin-bottom:50px;   
+}
+
+.grid li{
+    border-top: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    height:400px;
+    width:33%;
+    float:left;
+}
+
+.grid li:nth-child(-n+3){
+	border-top: none;
+}
+
+.grid li:nth-child(3n-1),
+.grid li:nth-child(3n-2) {
+	box-shadow: 1px 0 0 #ddd;
+}
+
+.grid li a{
+    display:block;
+    height:100%;
+    text-decoration: none !important;
+}
+
+.grid h3{
+    margin:130px 0 10px 0;
+    font-size:2.5em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.2s;
+	-moz-transition: -moz-transform 0.2s;
+	transition: transform 0.2s;
+    text-decoration: none !important;
+    color: #47a3da;
+}
+
+.grid h3:before{
+    content:" ";
+    height:6px;
+    background-color:#47a3da;
+    display:block;
+    width:160px;
+    margin:-10px 0 0 -80px;
+    left:50%;
+    position:absolute;
+    -webkit-transition: margin-top 0.2s; /* top or translate does not seem to work in Firefox */
+	-moz-transition: margin-top 0.2s;
+	transition: margin-top 0.2s;
+}
+
+.grid p{
+    text-transform:uppercase;
+    -webkit-transform: translateY(10px);
+	-moz-transform: -moz-translateY(10px);
+	-ms-transform: -ms-translateY(10px);
+	transform: translateY(10px);
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	-webkit-transition: transform 0.3s, opacity 0.2s;
+    color: #47a3da;
+    font-size:1em;
+}
+
+.grid li:hover h3{
+    opacity: 1;
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	transform: translateY(-20px);   
+    color:#fff;
+}
+
+.grid li:hover p{
+    opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);   
+    color:#fff;
+}
+
+.grid li:hover h3:before{
+     margin-top:50px;
+    background-color:#fff;
+}
+
+.grid li:hover{
+    background-color:#47a3da;
+    -webkit-transition: -webkit-transform 0.3s, background-color 0.2s;
+	-moz-transition: -moz-transform 0.3s, background-color 0.2s;
+	-webkit-transition: transform 0.3s, background-color 0.2s;
+}
+
+
